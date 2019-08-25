@@ -2,13 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import router from './router'
+import 'swiper/dist/css/swiper.css'
 import '@/assets/style/border.css'
 import '@/assets/style/reset.css'
 import '@/assets/style/iconfont.css'
 import fastClick from 'fastClick'
 Vue.config.productionTip = false
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper,)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
