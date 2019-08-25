@@ -3,7 +3,7 @@
     <swiper :options="swiperOption" >
       <!-- slides -->
       <swiper-slide
-      v-for="item of headerImg"
+      v-for="item of swiperImg"
       :key="item.id"
       >
         <img class="swiper-img"
@@ -22,7 +22,7 @@
     name: 'homeSwiper',
     data(){
       return{
-        headerImg:[
+        swiperImg:[
           {
             id:'001',
             imgUrl:'https://pic5.40017.cn/03/000/28/73/rB5oQFxG7M2AOgxwAADChAKgVcA559_520x218_00.jpg'
