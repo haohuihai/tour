@@ -87,5 +87,6 @@
     .icon-desc
       text-align:center
       padding-top:.2rem
+      padding-bottom :.5rem
 
 </style>
