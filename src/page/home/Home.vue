@@ -5,6 +5,7 @@
     <home-catalog></home-catalog>
     <home-hot></home-hot>
     <home-weekend></home-weekend>
+    <home-guess></home-guess>
   </div>
 </template>
 
@@ -14,6 +15,7 @@
   import homeCatalog from './components/homeCatalog'
   import homeHot from './components/homeHot'
   import homeWeekend from './components/homeWeekend'
+  import homeGuess from './components/homeGuess'
   export default {
     name: 'Home',
 components:{
@@ -21,7 +23,8 @@ components:{
   homeSwiper,
   homeCatalog,
   homeHot,
-  homeWeekend
+  homeWeekend,
+  homeGuess
 }
   }
 </script>
@@ -31,7 +34,7 @@ components:{
 .home
   position:relative
 .home-header
-    position :absolute
+    position :fixed
     top:0
     left:0
     z-index :100
