@@ -47,36 +47,12 @@
 <script>
   export default {
     name: 'homeHot',
-    data(){
-      return{
-        hotTrendList:[
-          {
-            id:'0000001',
-            desc:'快乐寒假',
-            cite:'亲子旅行记',
-            imgUrl:'https://pic5.40017.cn/01/000/65/88/rBANC1usNjyAWsDJAACkawp55dU429_100x100_00.png'
-          },{
-            id:'0000002',
-            desc:'温泉爆款',
-            cite:'又到一年温泉季',
-            imgUrl:'https://pic5.40017.cn/01/000/65/88/rBANC1usNjyAWsDJAACkawp55dU429_100x100_00.png'
-          }
-        ],
-        hotPriseList:[
-          {
-            id:'01',
-            num:'200',
-            prise:'200',
-          }
-        ],
-        hotContentList:[
-          {id:'00001',
-            imgUrl:'https://pic5.40017.cn/01/000/9d/d9/rBLkBlmSl26AACtXAALg8QhHckM352_100x100_00.jpg',
-            desc:'上海野生动物园成人票2张+上海浦东机场莎海国际酒店豪华双床房1晚'
-          }
-        ]
-      }
-    }
+    props:{
+      hotPriseList :Array,
+      hotTrendList :Array,
+      hotContentList: Array,
+    },
+
 
   }
 </script>

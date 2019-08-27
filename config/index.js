@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api':{
+        target:'http://localhost:8080',//像这个端口发送请求的时候进行转发
+        pathRewrite:{
+          '^/api':'/static/mock'//重写到这个位置
+          //mock前端独自开发需要向后端情趣一些数据，但是数据还没有准备好，就在前端自己模拟后端，模拟后端请求的路径是static下的mock，
+          // 通过proxyTable进行重写就能实现前端的模拟请求数据
+        }
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST

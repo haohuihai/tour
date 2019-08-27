@@ -23,39 +23,16 @@
 <script>
   export default {
     name: 'homeCatalog',
+    props:{
+      iconList:Array
+    },
     data(){
       return{
         red:'red',
         orange:'orange',
         green:'green',
         blue:'blue',
-        iconList:[
-          {
-            id:'0001',
-            imgUrl:'https://pic5.40017.cn/01/000/84/4f/rBLkBVmLtaiAcmRaAAAEH9JbM6g234.png',
-            desc:'本地热推',
-            color:"red"
-          },
-          {
-            id:'0002',
-            imgUrl:'https://pic5.40017.cn/02/001/6d/e2/rBLkCFmEG8eALBI8AAAEA1xXmqI793.png',
-            desc:'亲子游',
-            color:"green"
-          },
-          {
-            id:'0003',
-            imgUrl:'https://pic5.40017.cn/02/001/6d/db/rBLkCVmEGfeAVI4FAAAEXdabEDE534.png',
-            desc:'温泉预售',
-            color:"blue"
-          },
-          {
-            id:'0004',
-            imgUrl:'https://pic5.40017.cn/02/001/6d/e2/rBLkCFmEG8eALBI8AAAEA1xXmqI793.png',
-            desc:'自然风光',
-            color:"orange"
-          },
 
-        ]
       }
     },
 

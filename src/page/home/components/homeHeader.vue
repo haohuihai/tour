@@ -10,7 +10,7 @@
       <span class="iconfont">&#xe87e;</span>
       上海南昌海洋公园</div>
     <div class="header-city"
-         :class="[showCity]">北京
+         :class="[showCity]">{{this.city}}
       <span class="iconfont">&#xe631;</span>
     </div>
   </div>
@@ -19,6 +19,7 @@
 <script>
   export default {
     name: 'homeHeader',
+    props:['city'],//接值
     data(){
       return{
         showHeader:'',
