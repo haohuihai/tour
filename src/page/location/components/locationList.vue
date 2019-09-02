@@ -47,6 +47,23 @@
   import BScroll from 'better-scroll'
   export default {
     name: 'locationList',
+    props:{
+      letter:String
+    },
+
+    watch:{
+      letter(){
+        // console.log(this.letter)
+        const elementLetter = this.$refs[this.letter]
+        const elementPresent = this.$refs.present
+        if(elementLetter){
+          const element = elementLetter[0]
+          this.scroll.scrollToElement(element)
+        }else{
+          this.scroll.scrollToElement(elementPresent)
+        }
+      }
+    },
     data(){
       return {
         city:'',
