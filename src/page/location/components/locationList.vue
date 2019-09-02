@@ -6,7 +6,7 @@
         <div
           class="present-button"
 
-        >正在获取当前位置</div>
+        >{{this.city}}</div>
       </div>
       <div class="hot-area">
         <div class="hot-title">热门城市</div>
@@ -43,6 +43,7 @@
 </template>
 
 <script>
+  import BMap from 'BMap'
   import BScroll from 'better-scroll'
   export default {
     name: 'locationList',
@@ -3918,7 +3919,18 @@
         invert:false,
         easeTime:300
       }
-    })}}
+    })
+
+    let map=new BMap.Map('allmap')//new一个地图实例加载到allmap
+    let myCity=new BMap.LocalCity()
+    myCity.get((result)=>{//使用一个箭头函数
+      if(result){
+        this.city=result.name
+      }else {
+        this.city='正在获取当前位置'
+      }
+    })
+    }}
 </script>
 
 
