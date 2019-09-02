@@ -20,6 +20,9 @@
 <script>
   export default {
     name: 'locationAlphabet',
+    props:{
+      alphabetList:Array
+    },
     methods:{
       handleLetterClick(e){
         this.content = e.target.innerText
@@ -45,104 +48,7 @@
           display:'none'
         },
         content:'',
-        alphabetList:[
-          {
-            id:11254,
-            content:"当前"
-          },
-          {
-            id:11255,
-            content:"热城市"
-          },
-          {
-            id:11256,
-            content:"A"
-          },
-          {
-            id:11257,
-            content:"B"
-          },
-          {
-            id:11258,
-            content:"C"
-          },
-          {
-            id:11259,
-            content:"D"
-          },
-          {
-            id:11260,
-            content:"E"
-          },
-          {
-            id:11261,
-            content:"F"
-          },
-          {
-            id:11262,
-            content:"G"
-          },
-          {
-            id:11263,
-            content:"H"
-          },
-          {
-            id:11264,
-            content:"J"
-          },
-          {
-            id:11265,
-            content:"K"
-          },
-          {
-            id:11266,
-            content:"L"
-          },
-          {
-            id:11267,
-            content:"M"
-          },
-          {
-            id:11268,
-            content:"N"
-          },
-          {
-            id:11269,
-            content:"P"
-          },
-          {
-            id:11270,
-            content:"Q"
-          },
-          {
-            id:11271,
-            content:"R"
-          },
-          {
-            id:11272,
-            content:"S"
-          },
-          {
-            id:11273,
-            content:"T"
-          },
-          {
-            id:11274,
-            content:"W"
-          },
-          {
-            id:11275,
-            content:"X"
-          },
-          {
-            id:11276,
-            content:"Y"
-          },
-          {
-            id:11277,
-            content:"Z"
-          }
-        ]
+       
       }
     }
 
