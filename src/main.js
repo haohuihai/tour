@@ -9,6 +9,7 @@ import 'swiper/dist/css/swiper.css'
 import '@/assets/style/border.css'
 import '@/assets/style/reset.css'
 import '@/assets/style/iconfont.css'
+import 'mint-ui/lib/style.css'
 import fastClick from 'fastClick'
 import LyTab from 'ly-tab'
 Vue.use(LyTab)

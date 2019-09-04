@@ -4,6 +4,7 @@ import Home from '@/page/home/Home'
 import Location from '@/page/location/Location'
 import Detail from '@/page/detail/Detail'
 import detailGalary from  '@/page/detail/components/detailGalary'
+import mapContent from  '@/page/detail/components/mapContent'
 Vue.use(Router)
 
 export default new Router({
@@ -22,6 +23,10 @@ export default new Router({
       children:[
         {path:'galary',
           component: detailGalary
+
+        },
+        {path:'map',
+          component: mapContent
 
         }
       ]
