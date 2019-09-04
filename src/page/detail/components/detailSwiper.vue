@@ -1,5 +1,4 @@
 <template>
-
   <div class="swiper">
     <router-link to="galary" append>
     <swiper :options="swiperOption" >
@@ -35,13 +34,7 @@ data(){
     loop:true
   },
   swiperList:[
-    {
-      "id":"001",
-      "imgUrl":"https://pic5.40017.cn/02/001/51/05/rBLkCFvgFkCAcjkCAAGtOaPMD6E992_750x374_00.jpg",
-      "date":"2天1晚",
-      "page":"288",
-      "number":"101169"
-    },
+
     {
       "id":"002",
       "imgUrl":"https://pic5.40017.cn/02/001/26/c8/rBLkCFsqEgCABIrVAAFS4qATNbE875_750x374_00.jpg",
@@ -86,7 +79,7 @@ data(){
       padding-left:4.2rem
       color:#fff
       font-size:.3rem
-    .right
+    .right:
       float:right
       margin-right:.1rem
       color:#fff

@@ -2,38 +2,35 @@
   <div class="galary-content">
     <div class="wrapper">
       <div
-        class="imgWrapper"
         v-for="item of imgList[this.index][this.index]"
         :key="item.id"
-      >
-        <img
-          :src="item.imgUrl"
-          @click="handlePictureClick(item.id)"
-        >
+        class="imgWrapper">
+        <img :src="item.imgUrl" alt="">
       </div>
     </div>
-    <div
-      class="galary"
-      v-show="show"
-      :length="length"
+    <div class="galary"
+         v-show="show"
     >
-      <swiper :options="swiperOption">
+      <swiper :options="swiperOption" >
+        <!-- slides -->
         <swiper-slide
           v-for="item of imgList[this.index][this.index]"
           :key="item.id"
         >
-          <div class="galary-desc">{{parseInt(item.id)+1}}/{{length}}</div>
           <div class="galary-img">
-            <img :src="item.imgUrl">
+
+            <img
+
+              :src="item.imgUrl" 
+                 @click="handlePictureClick">
           </div>
+<!--          <div class="cancelBtn">-->
+<!--            X-->
+<!--          </div>-->
         </swiper-slide>
       </swiper>
-      <span
-        class="cancelBtn"
-        @click="handlePictureBackClick"
-      >X</span>
-
     </div>
+
   </div>
 </template>
 
@@ -41,28 +38,86 @@
   import {mapState} from 'vuex'
   export default {
     name: 'galaryContent',
-    props:{
-      imgList:Array
-    },
     computed:mapState(['index']),
     methods:{
       handlePictureClick(){
-        this.length = this.imgList[this.index][this.index].length
         this.show=true
-      },
-      handlePictureBackClick(){
-        this.show=false
       }
     },
     data(){
-      return {
-        length:1,
+      return{
         show:false,
         swiperOption:{
           loop:false
-        }
+        },
+        imgList:[
+          {
+            0:[
+              {
+                id:'0',
+                imgUrl: "https://pic3.40017.cn/zzy/rimage/2015/04/18/17/hETxTo_420x228_00.jpg"
+              },
+              {
+                id:'1',
+                imgUrl: "https://pic3.40017.cn/zzy/rimage/2015/04/18/17/hETxTo_420x228_00.jpg"
+              },
+              {
+                id:'2',
+                imgUrl: "https://pic3.40017.cn/zzy/rimage/2015/04/18/17/hETxTo_420x228_00.jpg"
+              },
+              {
+                id:'3',
+                imgUrl: "https://pic3.40017.cn/zzy/rimage/2015/04/18/17/hETxTo_420x228_00.jpg"
+              },
+
+            ]
+          },
+          {
+            1:[
+              {
+                id:'0',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+              {
+                id:'1',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+              {
+                id:'2',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+              {
+                id:'3',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+
+            ]
+          },
+          {
+            2:[
+              {
+                id:'0',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+              {
+                id:'1',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+              {
+                id:'2',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+              {
+                id:'3',
+                imgUrl: "https://pic5.40017.cn/02/000/02/22/rBLkCVlkdDqAP4NzAAMCZSYX5mY633_420x228_00.jpg"
+              },
+
+            ]
+          },
+        ]
       }
     }
+
 
   }
 </script>
@@ -85,12 +140,8 @@
     bottom:0
     background:#000
     color:#fff
-    .galary-desc
-      text-align:center
-      font-size:.3rem
-      padding:1.2rem
     .galary-img
-      margin-top:2rem
+      margin-top:4.5rem
     .galary-img>img
       width:100%
     .swiper-pagination
@@ -100,6 +151,5 @@
       font-size:.5rem
       position:relative
       left:3.5rem
-      bottom:-2rem
-      color:#fff
+      bottom:-4rem
 </style>
