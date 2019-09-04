@@ -1,6 +1,7 @@
 <template>
   <div >
-<location-header></location-header>
+   <div class="load" v-if="loading">load.....</div>
+<location-header :cities="cities"></location-header>
     <location-list :letter="letter"
     :cities="cities"
     :hotCities="hotCities"
@@ -26,7 +27,8 @@ import locationAlphabet from './components/locationAlphabet'
         loading:true,
         cities:{},
         hotCities:[],
-        alphabetList:[]
+        alphabetList:[],
+        loading:true,
 
       }
     },
@@ -40,6 +42,7 @@ import locationAlphabet from './components/locationAlphabet'
         res=res.data//进行派发
         // console.log(res)
 if (res.data){
+  this.loading=false
   const data=res.data
   this.cities=data.cities
   this.hotCities=data.hotCities
@@ -65,5 +68,15 @@ if (res.data){
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
-
+  .load
+    position:absolute
+    top:7rem
+    left:3.5rem
+    z-index:1011
+    width:1.8rem
+    height:.5rem
+    opacity:.3
+    background:#000
+    color:#fff
+    text-align:center
 </style>
