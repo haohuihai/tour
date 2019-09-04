@@ -4,9 +4,11 @@
    :class="[guessDescChange]">
      <div>猜你喜欢</div>
    </div>
-    <div class="guess-content"
+
+    <router-link tag="div" class="guess-content"
     v-for="item of guessList"
          :key="item.id"
+                 :to='"/detail/"+item.id'
     >
       <div class="guess-content-img">
         <img :src="item.imgUrl" alt="">
@@ -24,7 +26,7 @@
 <span>￥</span>{{item.prise}}<span>份</span>
       </div>
     </div>
-    </div>
+    </router-link>
   </div>
 </template>
 
