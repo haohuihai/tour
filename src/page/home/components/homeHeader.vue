@@ -11,7 +11,7 @@
       上海南昌海洋公园</div>
     <router-link to="/location">
     <div class="header-city"
-         :class="[showCity]">{{this.city}}
+         :class="[showCity]">{{this.$store.state.city}}
       <span class="iconfont">&#xe631;</span>
     </div>
     </router-link>

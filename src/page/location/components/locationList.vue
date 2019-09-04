@@ -5,8 +5,9 @@
         <div class="present-title" ref="present">当前</div>
         <div
           class="present-button"
+          @click="handlePresentClick"
 
-        >{{this.city}}</div>
+        >{{this.$store.state.city}}</div>
       </div>
       <div class="hot-area">
         <div class="hot-title">热门城市</div>
@@ -15,6 +16,7 @@
             class="hot-button"
             v-for="item of hotCities"
             :key="item.id"
+            @click="handleCurrentClick(item.name)"
 
           >{{item.name}}</div>
         </div>
@@ -32,7 +34,7 @@
               class="alph-button border-bottom"
               v-for="innerItem of item"
               :key="innerItem.id"
-
+              @click="handleAlphClick(innerItem.name)"
             >{{innerItem.name}}</div>
           </div>
 
@@ -52,7 +54,18 @@
       cities:Object,
       hotCities:Array
     },
-
+methods:{
+  handleCurrentClick(city){
+    this.$store.dispatch('change',city)
+    this.$router.push('/')
+  },
+  handleAlphClick(city){
+    this.$store.dispatch('change',city)
+    this.$router.push('/')
+  },handlePresentClick(){
+    this.$router.push('/')
+  }
+},
     watch:{
       letter(){
         // console.log(this.letter)
@@ -83,15 +96,7 @@
       }
     })
 
-    let map=new BMap.Map('allmap')//new一个地图实例加载到allmap
-    let myCity=new BMap.LocalCity()
-    myCity.get((result)=>{//使用一个箭头函数
-      if(result){
-        this.city=result.name
-      }else {
-        this.city='正在获取当前位置'
-      }
-    })
+
     }}
 </script>
 
