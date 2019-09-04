@@ -1,7 +1,8 @@
 <template>
   <div>
     <detail-header></detail-header>
-
+    <detail-swiper></detail-swiper>
+<router-view></router-view>
   </div>
 </template>
 
@@ -9,13 +10,14 @@
 
 
   import detailHeader from './components/detailHeader'
-
+  import detailSwiper from './components/detailSwiper'
 
   export default {
     name: 'Detail',
 
     components:{
       detailHeader,
+      detailSwiper
 
     },
 

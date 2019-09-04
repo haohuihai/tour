@@ -10,6 +10,8 @@ import '@/assets/style/border.css'
 import '@/assets/style/reset.css'
 import '@/assets/style/iconfont.css'
 import fastClick from 'fastClick'
+import LyTab from 'ly-tab'
+Vue.use(LyTab)
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper,)
