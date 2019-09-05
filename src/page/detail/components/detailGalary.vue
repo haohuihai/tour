@@ -22,16 +22,14 @@
   import galaryContent from './galaryContent'
   export default {
     name: 'detailGalary',
+    props:{
+      galaryList:Array,
+      imgList:Array
+    },
     data(){
       return{
         type:'galaryContent',
-        galaryList:[
-          "ssdfs",
-          "dfasgasdf",
-          "dfsgffsf",
-          "dfsgffsf",
-          "dfsgffsf"
-        ],
+
 selectedId:0,
         items:[
 

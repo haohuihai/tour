@@ -25,7 +25,9 @@
 <script>
   export default {
     name: 'detailSwiper',
-
+props:{
+      swiperList:Array
+},
 data(){
       return{
 
@@ -33,16 +35,7 @@ data(){
   swiperOption:{
     loop:true
   },
-  swiperList:[
 
-    {
-      "id":"002",
-      "imgUrl":"https://pic5.40017.cn/02/001/26/c8/rBLkCFsqEgCABIrVAAFS4qATNbE875_750x374_00.jpg",
-      "date":"2天1晚",
-      "page":"288",
-      "number":"101169"
-    }
-  ]
 }},
     methods:{
       handleBackClick(){
